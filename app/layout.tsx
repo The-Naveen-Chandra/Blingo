@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+
 import "./globals.css";
 
 const font = Nunito({ subsets: ["latin"] });
@@ -7,6 +9,14 @@ const font = Nunito({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Blingo",
   description: "Duolingo but for Bling",
+  icons: {
+    icon: [
+      {
+        href: "/mascot.svg",
+        url: "/mascot.svg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -15,8 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={font.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={font.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
