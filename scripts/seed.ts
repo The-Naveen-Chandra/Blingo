@@ -70,18 +70,30 @@ const main = async () => {
         order: 1,
         title: "Nouns",
       },
-      // {
-      //   id: 2,
-      //   unitId: 1, // Unit 1 (Learn the basic of Hindi)
-      //   order: 2,
-      //   title: "Verbs",
-      // },
-      // {
-      //   id: 3,
-      //   unitId: 1, // Unit 1 (Learn the basic of Hindi)
-      //   order: 3,
-      //   title: "Adjectives",
-      // },
+      {
+        id: 2,
+        unitId: 1, // Unit 1 (Learn the basic of Hindi)
+        order: 2,
+        title: "Verbs",
+      },
+      {
+        id: 3,
+        unitId: 1, // Unit 1 (Learn the basic of Hindi)
+        order: 3,
+        title: "Adjectives",
+      },
+      {
+        id: 4,
+        unitId: 1, // Unit 1 (Learn the basic of Hindi)
+        order: 4,
+        title: "Phrases",
+      },
+      {
+        id: 5,
+        unitId: 1, // Unit 1 (Learn the basic of Hindi)
+        order: 5,
+        title: "Numbers",
+      },
     ]);
 
     await db.insert(schema.challenges).values([
@@ -92,13 +104,13 @@ const main = async () => {
         order: 1,
         question: 'What is the Hindi word for "apple"?',
       },
-      // {
-      //   id: 2,
-      //   lessonsId: 1, // Nouns
-      //   type: "SELECT",
-      //   order: 2,
-      //   question: 'What is the Hindi word for "banana"?',
-      // },
+      {
+        id: 2,
+        lessonsId: 1, // Nouns
+        type: "SELECT",
+        order: 2,
+        question: 'What is the Hindi word for "banana"?',
+      },
       // {
       //   id: 3,
       //   lessonsId: 1, // Nouns
